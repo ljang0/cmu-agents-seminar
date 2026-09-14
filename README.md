@@ -14,6 +14,10 @@ Meeting details and contacts are in the same file. Lawrence's email was verified
 
 Run `npm install`, then `npm run dev`. Run `npm run build`, `npm run lint`, and `npx tsc --noEmit` for checks.
 
+## Deployment
+
+Pushes to `main` publish the static site with GitHub Pages. Run `npm run build:pages` to verify the Pages build locally.
+
 ## Illustration
 
 `public/agents-illustration.png` is an original transparent PNG generated once with the built-in image tool. It is decorative; all seminar details remain accessible HTML.
