@@ -37,9 +37,9 @@ export default function Home() {
             <p className="seminar-label">Weekly research seminar</p>
             <h1>Agents + RL + Envs</h1>
             <p className="intro-text">
-              We’re a group of CMU researchers working on agents, reinforcement
-              learning, and environments. We meet weekly to share work in
-              progress, discuss papers, and host talks.
+              We’re CMU PhD students and faculty working on agents,
+              reinforcement learning, and environments. We meet weekly to share
+              work in progress, discuss papers, and host talks.
             </p>
             <p className="meeting-details">
               <strong>{seminar.day}</strong>
