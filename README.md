@@ -1,6 +1,6 @@
 # CMU Agents + RL + Envs seminar
 
-A compact academic seminar page: weekly meeting details, a Monday schedule table, and contact information. The layout follows the organizer's reference at https://www.cs.cmu.edu/~mlaiseminar/.
+A compact academic seminar page: a short introduction to the CMU research group, weekly meeting details, a Monday schedule table, sponsors (TBD), and organizer contacts. The illustrated blue header follows the friendly style of https://cmu-agent-workshop.github.io/; the schedule follows https://www.cs.cmu.edu/~mlaiseminar/. No workshop speakers, dates, sponsors, or logos are reused.
 
 ## Update the schedule
 
@@ -13,3 +13,9 @@ Meeting details and contacts are in the same file. Lawrence's email was verified
 ## Development
 
 Run `npm install`, then `npm run dev`. Run `npm run build`, `npm run lint`, and `npx tsc --noEmit` for checks.
+
+## Illustration
+
+`public/agents-illustration.png` is an original transparent PNG generated once with the built-in image tool. It is decorative; all seminar details remain accessible HTML.
+
+Prompt: Clean, friendly editorial illustration of two expressive robots collaborating around a small tabletop environment with geometric blocks. One robot navy and white, the other teal and white. Full bodies, compact square composition, readable at 250 pixels wide, transparent background with generous margins. Crisp simplified shapes, restrained navy, teal, and white with a tiny red accent. No text, lettering, numbers, branding, logos, watermarks, QR codes, decorative stickers, or website UI.

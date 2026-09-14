@@ -1,4 +1,5 @@
 import { seminar, sessions } from '@/lib/seminar';
+import Image from 'next/image';
 import {
   Table,
   TableBody,
@@ -21,19 +22,48 @@ export default function Home() {
         Skip to schedule
       </a>
       <main className="page">
-        <header>
-          <h1>CMU Agents + RL + Envs Seminar</h1>
-          <p className="meeting-details">
-            <strong>
-              {seminar.day}, {seminar.time} ET
-            </strong>
-            <span aria-hidden="true"> · </span>
-            {seminar.room}
-          </p>
+        <div className="masthead">
+          <a className="university" href="https://www.cmu.edu/">
+            Carnegie Mellon University
+          </a>
+          <nav aria-label="Page sections">
+            <a href="#schedule">Schedule</a>
+            <a href="#sponsors">Sponsors</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+        <header className="intro">
+          <div className="intro-copy">
+            <p className="seminar-label">Weekly research seminar</p>
+            <h1>Agents + RL + Envs</h1>
+            <p className="intro-text">
+              We’re a group of CMU researchers working on agents, reinforcement
+              learning, and environments. We meet weekly to share work in
+              progress, discuss papers, and host talks.
+            </p>
+            <p className="meeting-details">
+              <strong>{seminar.day}</strong>
+              <span>{seminar.time} ET</span>
+              <span className="meeting-location">{seminar.room}</span>
+            </p>
+          </div>
+          <Image
+            className="banner-art"
+            src="/agents-illustration.png"
+            width="1254"
+            height="1254"
+            alt=""
+            aria-hidden="true"
+            decoding="async"
+            unoptimized
+          />
         </header>
 
         <section id="schedule" aria-labelledby="schedule-title">
-          <h2 id="schedule-title">Schedule · {seminar.semester}</h2>
+          <div className="section-heading">
+            <h2 id="schedule-title">Schedule</h2>
+            <p>{seminar.semester}</p>
+          </div>
           <Table className="schedule-table" aria-labelledby="schedule-title">
             <TableHeader>
               <TableRow>
@@ -48,8 +78,17 @@ export default function Home() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {sessions.map((session) => (
-                <TableRow key={session.date}>
+              {sessions.map((session, index) => (
+                <TableRow
+                  key={session.date}
+                  className={
+                    index > 0 &&
+                    session.date.slice(0, 7) !==
+                      sessions[index - 1].date.slice(0, 7)
+                      ? 'month-start'
+                      : undefined
+                  }
+                >
                   <TableCell>
                     <time dateTime={session.date}>
                       {dateFormat.format(new Date(`${session.date}T12:00:00Z`))}
@@ -86,27 +125,46 @@ export default function Home() {
           </Table>
         </section>
 
-        <section className="contact" aria-labelledby="contact-title">
-          <h2 id="contact-title">Contact</h2>
-          <p>
-            External speakers and sponsors are welcome. Contact{' '}
-            <a href="https://lawrencekjang.github.io/">Lawrence Jang</a> at{' '}
-            <a href={`mailto:${seminar.email}`}>{seminar.email}</a>.
-          </p>
-          <p>
-            Or reach out to{' '}
-            {seminar.contacts.map((handle, index) => (
-              <span key={handle}>
-                {index > 0 && ', '}
-                <a href={`https://x.com/${handle}`}>@{handle}</a>
-              </span>
-            ))}
-            .
-          </p>
-        </section>
-        <footer>
-          <a href="https://www.cmu.edu/">Carnegie Mellon University</a>
-        </footer>
+        <div className="bottom-sections">
+          <section
+            className="sponsors"
+            id="sponsors"
+            aria-labelledby="sponsors-title"
+          >
+            <h2 id="sponsors-title">Sponsors</h2>
+            <p className="sponsor-status">TBD</p>
+            <a
+              href={`mailto:${seminar.email}?subject=CMU%20Agents%20Seminar%20Sponsorship`}
+            >
+              Sponsorship inquiries
+            </a>
+          </section>
+          <section
+            className="contact"
+            id="contact"
+            aria-labelledby="contact-title"
+          >
+            <h2 id="contact-title">Organizers & contact</h2>
+            <div>
+              <p>
+                <a href="https://lawrencekjang.github.io/">Lawrence Jang</a>
+                {' · '}
+                <a href={`mailto:${seminar.email}`}>{seminar.email}</a>
+              </p>
+              <p className="other-contacts">
+                {seminar.contacts.map((handle, index) => (
+                  <span key={handle}>
+                    {index > 0 && ' · '}
+                    <a href={`https://x.com/${handle}`}>@{handle}</a>
+                  </span>
+                ))}
+              </p>
+              <p className="speaker-note">
+                External speakers are welcome. Email or DM us to give a talk.
+              </p>
+            </div>
+          </section>
+        </div>
       </main>
     </>
   );
