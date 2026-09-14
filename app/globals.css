@@ -4,19 +4,19 @@
 
 @theme inline {
   --color-background: #ffffff;
-  --color-foreground: #253342;
-  --color-muted: #f5f7f9;
-  --color-muted-foreground: #66717b;
-  --color-border: #e1e7ec;
-  --color-ring: #1d567f;
+  --color-foreground: #242424;
+  --color-muted: #f5f5f5;
+  --color-muted-foreground: #6d6e71;
+  --color-border: #e0e0e0;
+  --color-ring: #c41230;
   --font-sans: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 :root {
   color-scheme: light;
-  --ink: #253342;
-  --muted: #66717b;
-  --accent: #1d567f;
-  --rule: #e1e7ec;
+  --ink: #242424;
+  --muted: #6d6e71;
+  --accent: #c41230;
+  --rule: #e0e0e0;
 }
 * {
   box-sizing: border-box;
@@ -29,6 +29,7 @@ body {
   font-size: 1rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  border-top: 3px solid var(--accent);
 }
 a {
   color: var(--accent);
@@ -37,14 +38,14 @@ a {
   text-decoration-thickness: 1px;
 }
 a:hover {
-  color: #103b5a;
+  color: #941120;
 }
 a:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 4px;
 }
 ::selection {
-  background: #d6e8f5;
+  background: #f6d7dd;
 }
 .page {
   max-width: 1040px;
@@ -84,7 +85,7 @@ p {
 .intro {
   position: relative;
   padding: 26px 30px;
-  background: #eaf3fa;
+  background: #c41230;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -94,12 +95,12 @@ p {
   padding-right: 220px;
 }
 .seminar-label {
-  color: var(--accent);
+  color: #ffffff;
   font-size: 0.8125rem;
   margin-bottom: 6px;
 }
 h1 {
-  color: #163f60;
+  color: #ffffff;
   font-size: clamp(1.875rem, 4vw, 2.375rem);
   line-height: 1.2;
   font-weight: 650;
@@ -109,13 +110,14 @@ h1 {
   margin-top: 12px;
   font-size: 1rem;
   line-height: 1.65;
-  color: #455b6a;
+  color: #ffffff;
 }
 .banner-art {
   position: absolute;
   width: 220px;
   height: 220px;
   object-fit: contain;
+  filter: grayscale(1);
   right: 15px;
   top: 50%;
   transform: translateY(-50%);
@@ -126,14 +128,14 @@ h1 {
   align-items: center;
   gap: 4px 14px;
   margin-top: 18px;
-  color: #214d6b;
+  color: #ffffff;
   font-size: 0.875rem;
 }
 .meeting-details strong {
   font-weight: 600;
 }
 .meeting-details > span {
-  border-left: 1px solid #b8cfdf;
+  border-left: 1px solid #ffffff66;
   padding-left: 14px;
 }
 h2 {
@@ -163,8 +165,8 @@ h2 {
   border-collapse: collapse;
 }
 .schedule-table th {
-  background: #f0f5f8;
-  color: #3d5364;
+  background: #f7f2f3;
+  color: #57484b;
   font-size: 0.875rem;
   font-weight: 500;
   height: auto;
@@ -193,16 +195,16 @@ h2 {
   width: 39%;
 }
 .schedule-table tbody tr:nth-child(even) {
-  background: #fbfcfd;
+  background: #fcfbfb;
 }
 .schedule-table tbody tr:hover {
-  background: #f1f6fa;
+  background: #fbf0f2;
 }
 .schedule-table .month-start td {
-  border-top: 2px solid #d0dce5;
+  border-top: 2px solid #e0d4d7;
 }
 .pending {
-  color: #6d7780;
+  color: #6d6e71;
 }
 .notice {
   color: var(--muted);
@@ -214,7 +216,7 @@ h2 {
   gap: 44px;
   margin-top: 28px;
   padding-top: 23px;
-  border-top: 1px solid #d0dce5;
+  border-top: 1px solid #e0d4d7;
 }
 .bottom-sections section {
   scroll-margin-top: 20px;
