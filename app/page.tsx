@@ -35,11 +35,11 @@ export default function Home() {
         <header className="intro">
           <div className="intro-copy">
             <p className="seminar-label">Weekly research seminar</p>
-            <h1>Agents + RL + Envs</h1>
+            <h1>Agents and RL Seminar</h1>
             <p className="intro-text">
-              We’re CMU PhD students and faculty working on agents,
-              reinforcement learning, and environments. We meet weekly to share
-              work in progress, discuss papers, and host talks.
+              We’re CMU PhD students and faculty working on agents and
+              reinforcement learning. We meet weekly to share work in progress,
+              discuss papers, and host talks.
             </p>
             <p className="meeting-details">
               <strong>{seminar.day}</strong>

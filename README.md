@@ -1,4 +1,4 @@
-# CMU Agents + RL + Envs seminar
+# CMU Agents and RL Seminar
 
 A compact academic seminar page: a short introduction to CMU PhD students and faculty, weekly meeting details, a Monday schedule table, sponsors (TBD), and organizer contacts. The illustrated header follows the friendly style of https://cmu-agent-workshop.github.io/; the schedule follows https://www.cs.cmu.edu/~mlaiseminar/. No workshop speakers, dates, sponsors, or logos are reused. The primary accent is official Carnegie Red (#C41230), from https://brand.cmu.edu/visual-identity/colors.
 
