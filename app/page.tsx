@@ -1,5 +1,5 @@
 import { seminar, sessions } from '@/lib/seminar';
-import Image from 'next/image';
+import { CarlMascot } from '@/components/carl-mascot';
 import {
   Table,
   TableBody,
@@ -49,16 +49,7 @@ export default function Home() {
               <span className="meeting-location">{seminar.room}</span>
             </p>
           </div>
-          <Image
-            className="carl-art"
-            src="/carl-fredricksen.png"
-            width="512"
-            height="768"
-            alt=""
-            aria-hidden="true"
-            decoding="async"
-            unoptimized
-          />
+          <CarlMascot />
         </header>
 
         <section id="schedule" aria-labelledby="schedule-title">
