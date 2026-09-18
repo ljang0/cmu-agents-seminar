@@ -1,4 +1,4 @@
-# CMU Agents and RL Seminar
+# CMU Agents & RL Seminar (CARL)
 
 A compact academic seminar page: a short introduction to CMU PhD students and faculty, weekly meeting details, a Monday schedule table, sponsors (TBD), and organizer contacts. The illustrated header follows the friendly style of https://cmu-agent-workshop.github.io/; the schedule follows https://www.cs.cmu.edu/~mlaiseminar/. No workshop speakers, dates, sponsors, or logos are reused. The primary accent is official Carnegie Red (#C41230), from https://brand.cmu.edu/visual-identity/colors.
 
@@ -20,6 +20,6 @@ Pushes to `main` publish the static site with GitHub Pages. Run `npm run build:p
 
 ## Illustration
 
-`public/agents-illustration.png` is an original transparent PNG generated once with the built-in image tool. It is decorative; all seminar details remain accessible HTML.
+`public/carl-fredricksen.png` is a transparent character illustration generated with the built-in image tool and animated gently with CSS. It is decorative; all seminar details remain accessible HTML. The previous `agents-illustration.png` is retained as an unused source asset.
 
-Prompt: Clean, friendly editorial illustration of two expressive robots collaborating around a small tabletop environment with geometric blocks. One robot navy and white, the other teal and white. Full bodies, compact square composition, readable at 250 pixels wide, transparent background with generous margins. Crisp simplified shapes, restrained navy, teal, and white with a tiny red accent. No text, lettering, numbers, branding, logos, watermarks, QR codes, decorative stickers, or website UI.
+Prompt: Create a single isolated editorial cartoon figure for a university seminar website header. Show a friendly older male scholar standing upright, full body, with white hair, square glasses, a bow tie, a brown jacket, charcoal trousers, sturdy shoes, and a walking stick. In his other hand he holds five thin strings leading to five small muted-color floating balloons clustered closely overhead. Use clean simplified shapes, crisp edges, subtle gentle shading, and a restrained palette of Carnegie red, warm white, charcoal, brown, muted gold, slate blue, sage, and dusty rose. Keep the silhouette narrow and legible when displayed 180 pixels tall. Include transparent padding around the complete figure and balloons. Output a genuinely transparent alpha background. No text, logos, watermark, frame, interface, scenery, floor, or backdrop.

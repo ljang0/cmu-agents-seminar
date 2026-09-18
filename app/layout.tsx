@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     'https://cmu-agents-seminar.jang-lawrence.chatgpt.site',
   ),
-  title: 'Agents and RL Seminar | Carnegie Mellon University',
+  title: 'CMU Agents & RL Seminar (CARL)',
   description:
     'A weekly research seminar at CMU on agents and reinforcement learning. Mondays, 12:30–2 PM ET in GHC 8102. Speakers and sponsors welcome.',
   icons: { icon: '/favicon.svg' },
   openGraph: {
-    title: 'Agents and RL Seminar at CMU',
+    title: 'CMU Agents & RL Seminar (CARL)',
     description:
       'A weekly research seminar. Mondays, 12:30–2 PM ET, GHC 8102. External speakers and sponsors welcome.',
     type: 'website',

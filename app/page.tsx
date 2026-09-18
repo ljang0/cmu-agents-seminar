@@ -35,7 +35,9 @@ export default function Home() {
         <header className="intro">
           <div className="intro-copy">
             <p className="seminar-label">Weekly research seminar</p>
-            <h1>Agents and RL Seminar</h1>
+            <h1>
+              CMU Agents &amp; RL Seminar <span className="acronym">(CARL)</span>
+            </h1>
             <p className="intro-text">
               We’re CMU PhD students and faculty working on agents and
               reinforcement learning. We meet weekly to share work in progress,
@@ -48,10 +50,10 @@ export default function Home() {
             </p>
           </div>
           <Image
-            className="banner-art"
-            src="/agents-illustration.png"
-            width="1254"
-            height="1254"
+            className="carl-art"
+            src="/carl-fredricksen.png"
+            width="512"
+            height="768"
             alt=""
             aria-hidden="true"
             decoding="async"
