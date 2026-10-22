@@ -19,17 +19,11 @@ export type Session = {
   notice?: string;
 };
 
-// Seminar Mondays in the Fall 2026 teaching semester, starting September 21.
+// Seminar Mondays in the Fall 2026 teaching semester, starting October 26.
 // Talk fields remain TBD until confirmed.
-// CMU's calendar ends classes December 4 and lists fall break October 12–16:
+// CMU's calendar ends classes December 4:
 // https://www.cmu.edu/hub/calendar/docs/2627-academic-calendar.pdf
-// The seminar's fall-break meeting has not been confirmed or cancelled.
 export const sessions: Session[] = [
-  { date: '2026-09-21' },
-  { date: '2026-09-28' },
-  { date: '2026-10-05' },
-  { date: '2026-10-12', notice: 'Fall break (meeting TBD)' },
-  { date: '2026-10-19' },
   { date: '2026-10-26' },
   { date: '2026-11-02' },
   { date: '2026-11-09' },
