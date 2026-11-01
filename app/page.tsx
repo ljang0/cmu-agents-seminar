@@ -94,7 +94,13 @@ export default function Home() {
                   ) : (
                     <>
                       <TableCell className={session.speaker ? '' : 'pending'}>
-                        {session.speaker || 'TBD'}
+                        {session.speakerUrl ? (
+                          <a href={session.speakerUrl}>
+                            {session.speaker || 'TBD'}
+                          </a>
+                        ) : (
+                          session.speaker || 'TBD'
+                        )}
                       </TableCell>
                       <TableCell
                         className={session.affiliation ? '' : 'pending'}

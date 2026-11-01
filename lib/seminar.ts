@@ -12,6 +12,7 @@ export type Session = {
   date: string;
   title?: string;
   speaker?: string;
+  speakerUrl?: string;
   affiliation?: string;
   /** Optional link to the paper, talk page, or recording. */
   url?: string;
@@ -24,8 +25,13 @@ export type Session = {
 // CMU's calendar ends classes December 4:
 // https://www.cmu.edu/hub/calendar/docs/2627-academic-calendar.pdf
 export const sessions: Session[] = [
-  { date: '2026-10-26' },
-  { date: '2026-11-02' },
+  { date: '2026-10-26', notice: 'Social' },
+  {
+    date: '2026-11-02',
+    speaker: 'Ian Wu',
+    speakerUrl: 'https://ianyhwu.github.io/',
+    affiliation: 'CMU',
+  },
   { date: '2026-11-09' },
   { date: '2026-11-16' },
   { date: '2026-11-23' },
