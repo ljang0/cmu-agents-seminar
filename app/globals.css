@@ -274,6 +274,36 @@ h2 {
 .pending {
   color: #6d6e71;
 }
+.speaker-photo {
+  display: block;
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 6px;
+}
+.schedule-table .abstract-row td {
+  white-space: normal;
+  font-weight: 400;
+}
+.talk-abstract summary {
+  width: fit-content;
+  color: var(--accent);
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+.talk-abstract summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+.talk-abstract p {
+  margin-top: 12px;
+  max-width: 80ch;
+  line-height: 1.65;
+}
+.talk-abstract p:last-child {
+  margin-bottom: 8px;
+}
 .notice {
   color: var(--muted);
   font-style: italic;

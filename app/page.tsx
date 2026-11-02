@@ -1,5 +1,7 @@
 import { seminar, sessions } from '@/lib/seminar';
 import { CarlMascot } from '@/components/carl-mascot';
+import { Fragment } from 'react';
+import Image from 'next/image';
 import {
   Table,
   TableBody,
@@ -36,7 +38,8 @@ export default function Home() {
           <div className="intro-copy">
             <p className="seminar-label">Weekly research seminar</p>
             <h1>
-              CMU Agents &amp; RL Seminar <span className="acronym">(CARL)</span>
+              CMU Agents &amp; RL Seminar{' '}
+              <span className="acronym">(CARL)</span>
             </h1>
             <p className="intro-text">
               We’re CMU PhD students and faculty working on agents and
@@ -72,53 +75,81 @@ export default function Home() {
             </TableHeader>
             <TableBody>
               {sessions.map((session, index) => (
-                <TableRow
-                  key={session.date}
-                  className={
-                    index > 0 &&
-                    session.date.slice(0, 7) !==
-                      sessions[index - 1].date.slice(0, 7)
-                      ? 'month-start'
-                      : undefined
-                  }
-                >
-                  <TableCell>
-                    <time dateTime={session.date}>
-                      {dateFormat.format(new Date(`${session.date}T12:00:00Z`))}
-                    </time>
-                  </TableCell>
-                  {session.notice ? (
-                    <TableCell colSpan={3} className="notice">
-                      {session.notice}
+                <Fragment key={session.date}>
+                  <TableRow
+                    className={
+                      index > 0 &&
+                      session.date.slice(0, 7) !==
+                        sessions[index - 1].date.slice(0, 7)
+                        ? 'month-start'
+                        : undefined
+                    }
+                  >
+                    <TableCell>
+                      <time dateTime={session.date}>
+                        {dateFormat.format(
+                          new Date(`${session.date}T12:00:00Z`),
+                        )}
+                      </time>
                     </TableCell>
-                  ) : (
-                    <>
-                      <TableCell className={session.speaker ? '' : 'pending'}>
-                        {session.speakerUrl ? (
-                          <a href={session.speakerUrl}>
-                            {session.speaker || 'TBD'}
-                          </a>
-                        ) : (
-                          session.speaker || 'TBD'
-                        )}
+                    {session.notice ? (
+                      <TableCell colSpan={3} className="notice">
+                        {session.notice}
                       </TableCell>
-                      <TableCell
-                        className={session.affiliation ? '' : 'pending'}
-                      >
-                        {session.affiliation || 'TBD'}
+                    ) : (
+                      <>
+                        <TableCell className={session.speaker ? '' : 'pending'}>
+                          {session.speakerImage && (
+                            <Image
+                              className="speaker-photo"
+                              src={session.speakerImage}
+                              alt={session.speaker || 'Speaker portrait'}
+                              width={64}
+                              height={64}
+                              loading="lazy"
+                              unoptimized
+                            />
+                          )}
+                          {session.speakerUrl ? (
+                            <a href={session.speakerUrl}>
+                              {session.speaker || 'TBD'}
+                            </a>
+                          ) : (
+                            session.speaker || 'TBD'
+                          )}
+                        </TableCell>
+                        <TableCell
+                          className={session.affiliation ? '' : 'pending'}
+                        >
+                          {session.affiliation || 'TBD'}
+                        </TableCell>
+                        <TableCell className={session.title ? '' : 'pending'}>
+                          {session.url ? (
+                            <a href={session.url}>
+                              {session.title || 'Talk details'}
+                            </a>
+                          ) : (
+                            session.title || 'TBD'
+                          )}
+                        </TableCell>
+                      </>
+                    )}
+                  </TableRow>
+                  {session.abstract && (
+                    <TableRow className="abstract-row">
+                      <TableCell colSpan={4}>
+                        <details className="talk-abstract">
+                          <summary aria-label={`Abstract for ${session.title}`}>
+                            Abstract
+                          </summary>
+                          {session.abstract.map((paragraph) => (
+                            <p key={paragraph}>{paragraph}</p>
+                          ))}
+                        </details>
                       </TableCell>
-                      <TableCell className={session.title ? '' : 'pending'}>
-                        {session.url ? (
-                          <a href={session.url}>
-                            {session.title || 'Talk details'}
-                          </a>
-                        ) : (
-                          session.title || 'TBD'
-                        )}
-                      </TableCell>
-                    </>
+                    </TableRow>
                   )}
-                </TableRow>
+                </Fragment>
               ))}
             </TableBody>
           </Table>
