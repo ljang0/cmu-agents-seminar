@@ -164,13 +164,37 @@ export default function Home() {
             <h2 id="sponsors-title">Sponsors</h2>
             <ul className="sponsor-list">
               <li>
-                <a href="https://base10.vc/">Base10</a>
+                <a href="https://base10.vc/">
+                  <Image
+                    src="/sponsors/base10.svg"
+                    alt="Base10"
+                    width={119}
+                    height={28}
+                    unoptimized
+                  />
+                </a>
               </li>
               <li>
-                <a href="https://www.fleetai.com/">Fleet AI</a>
+                <a href="https://www.fleetai.com/">
+                  <Image
+                    src="/sponsors/fleet.svg"
+                    alt="Fleet AI"
+                    width={754}
+                    height={261}
+                    unoptimized
+                  />
+                </a>
               </li>
               <li>
-                <a href="https://www.datadoghq.com/">Datadog</a>
+                <a href="https://www.datadoghq.com/">
+                  <Image
+                    src="/sponsors/datadog.png"
+                    alt="Datadog"
+                    width={346}
+                    height={88}
+                    unoptimized
+                  />
+                </a>
               </li>
             </ul>
           </section>
