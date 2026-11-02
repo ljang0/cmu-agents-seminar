@@ -173,11 +173,6 @@ export default function Home() {
                 <a href="https://www.datadoghq.com/">Datadog</a>
               </li>
             </ul>
-            <a
-              href={`mailto:${seminar.email}?subject=CMU%20Agents%20Seminar%20Sponsorship`}
-            >
-              Sponsorship inquiries
-            </a>
           </section>
           <section
             className="contact"
