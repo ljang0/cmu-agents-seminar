@@ -327,10 +327,15 @@ h2 {
 .bottom-sections a {
   font-size: 0.875rem;
 }
-.sponsors .sponsor-status {
-  font-size: 1.25rem;
-  color: var(--muted);
-  margin-bottom: 6px;
+.sponsor-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: grid;
+  gap: 6px;
+}
+.sponsor-list a {
+  font-weight: 600;
 }
 .contact p + p {
   margin-top: 7px;

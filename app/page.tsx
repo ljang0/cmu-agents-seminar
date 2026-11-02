@@ -162,7 +162,17 @@ export default function Home() {
             aria-labelledby="sponsors-title"
           >
             <h2 id="sponsors-title">Sponsors</h2>
-            <p className="sponsor-status">TBD</p>
+            <ul className="sponsor-list">
+              <li>
+                <a href="https://base10.vc/">Base10</a>
+              </li>
+              <li>
+                <a href="https://www.fleetai.com/">Fleet AI</a>
+              </li>
+              <li>
+                <a href="https://www.datadoghq.com/">Datadog</a>
+              </li>
+            </ul>
             <a
               href={`mailto:${seminar.email}?subject=CMU%20Agents%20Seminar%20Sponsorship`}
             >
