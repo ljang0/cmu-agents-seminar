@@ -4,7 +4,6 @@ export const seminar = {
   time: '12:30–2 PM',
   room: 'GHC 8102',
   email: 'ljang@cs.cmu.edu',
-  contacts: ['kohjingyu', 'PranjalAggarw16', 'stephofx', 'ianwu97'],
 };
 
 export type Session = {
@@ -40,7 +39,17 @@ export const sessions: Session[] = [
       'In this talk, we study how LLMs coordinate multi-agent exploration on difficult mathematical and scientific reasoning problems. We find that models struggle to explore effectively: they assign repeated work, converge on suboptimal solutions too early, and spend substantial effort solving problems themselves instead of directing their subagents. We argue that effective orchestration requires a different set of behaviors and skills from conventional CoT-based problem-solving, and that these behaviors and skills can be explicitly trained. We introduce LOrE (Learning to Orchestrate Exploration), a method that combines midtraining on synthetic data with multi-turn reinforcement learning to teach models to coordinate exploration. Our results show that a trained orchestrator can explore more effectively and achieve substantial improvements as we scale test-time compute.',
     ],
   },
-  { date: '2026-11-09' },
+  {
+    date: '2026-11-09',
+    speaker: 'Wayne Chi',
+    speakerUrl: 'https://waynechi.com/',
+    affiliation: 'CMU',
+    speakerImage: '/wayne-chi.jpg',
+    title: 'Interaction-as-a-Judge',
+    abstract: [
+      'Coding agents are tasked with producing sophisticated interactive applications such as websites, desktop applications, and games. While humans assess these applications interactively, current automated LLM evaluations primarily focus on code analysis and unit tests. This mismatch can cause LLM judges to miss failures that are immediately apparent to human users. We study Interaction-as-a-Judge, an evaluation paradigm where computer-use agents (CUAs) directly interact with an application. We demonstrate that Interaction-as-a-Judge can improve both evaluation and generation of interactive applications. To this end, we collect and release two complementary datasets: 6,858 pairs of applications with human preferences and corresponding agent traces, and 222 applications with human-verified requirement labels. Relative to standard non-interactive approaches, we find that Interaction-as-a-Judge improves evaluation in terms of predicting human preferences (65.6%→69.1%) and requirement verification (77.0%→81.6%). We also observe scaling benefits: across both preference alignment and requirement verification, higher-quality interactions improve performance. Finally, through both inference- and training-time experiments, we demonstrate that Interaction-as-a-Judge can also improve the quality of generated artifacts. At inference time, Interaction-as-a-Judge repairs 75.5% of broken requirements within five attempts, compared to 55.4% for code-only self-feedback. At training time, using Interaction-as-a-Judge as a reward signal improves win-rate over the base model by 6.7pp while reducing both generated code length by 35.7% and build failure rates by 7.2pp compared to a code-only reward signal.',
+    ],
+  },
   {
     date: '2026-11-16',
     speaker: 'Daman Arora',

@@ -350,9 +350,6 @@ h2 {
 .contact a {
   overflow-wrap: anywhere;
 }
-.other-contacts {
-  color: var(--muted);
-}
 .speaker-note {
   color: var(--muted);
 }

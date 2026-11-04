@@ -210,16 +210,13 @@ export default function Home() {
                 {' · '}
                 <a href={`mailto:${seminar.email}`}>{seminar.email}</a>
               </p>
-              <p className="other-contacts">
-                {seminar.contacts.map((handle, index) => (
-                  <span key={handle}>
-                    {index > 0 && ' · '}
-                    <a href={`https://x.com/${handle}`}>@{handle}</a>
-                  </span>
-                ))}
+              <p>
+                <a href="https://stephofx.github.io/">Stephan Xie</a>
+                {' · '}
+                <a href="mailto:stephanxie@cmu.edu">stephanxie@cmu.edu</a>
               </p>
               <p className="speaker-note">
-                External speakers are welcome. Email or DM us to give a talk.
+                External speakers are welcome. Email us to give a talk.
               </p>
             </div>
           </section>
