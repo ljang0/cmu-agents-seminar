@@ -41,7 +41,18 @@ export const sessions: Session[] = [
     ],
   },
   { date: '2026-11-09' },
-  { date: '2026-11-16' },
+  {
+    date: '2026-11-16',
+    speaker: 'Daman Arora',
+    speakerUrl: 'https://daman1209arora.github.io/',
+    affiliation: 'CMU',
+    speakerImage: '/daman-arora.jpg',
+    title: 'Training Language Models to Fail Gracefully',
+    abstract: [
+      'Reinforcement learning has become a cornerstone of training increasingly capable language models. However, as these models are deployed in more complex and high-stakes environments, improving their capabilities alone is not enough. A central challenge is ensuring that models behave reliably, particularly when faced with uncertainty or situations where they are likely to make mistakes.',
+      'In this talk, we will discuss a broader line of research that reconsiders the optimization landscape induced by the classical REINFORCE algorithm. By examining how conventional policy-gradient objectives shape learning dynamics, this research develops alternative objectives that address fundamental limitations of standard reinforcement learning providing a unifying perspective on recent methods such as MaxRL, TailRL, and GracefulRL. The main focus of the talk will be GracefulRL, a framework for training models to recognize when they are likely to fail and choose safer alternatives without sacrificing their ability to succeed. Through theoretical insights and experiments across diverse decision-making and reasoning tasks, the talk will illustrate how RL when done right can lead to not only more capable but also more reliable AI systems.',
+    ],
+  },
   { date: '2026-11-23' },
   { date: '2026-11-30' },
 ];
